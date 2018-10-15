@@ -1,0 +1,44 @@
+// main: ../main.less
+@import "../enviroment/import.less";
+
+.form-control:focus {
+    box-shadow: @link-color;
+    border-color: @link-color;
+}   
+.dropdown-menu {
+    background-color: @dark-color;
+}
+
+#triangle {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid @link-color;
+    border-left: 100px solid transparent;
+}
+
+
+.navbar {
+    color: black;
+    ul {
+        li {
+            border: 0;
+            border-radius: 0;
+            padding: 15px;
+            margin-left: 10px;
+            margin-right: 10px;
+            a {
+                text-transform: capitalize;
+                color: @white;
+                text-decoration: none;
+            }
+        }
+        li.active {
+            border: 1px solid @white;
+            border-radius: 3px;
+            background-color: @white;
+            a {
+                color: @darker-color;
+            }
+        }
+    }
+}

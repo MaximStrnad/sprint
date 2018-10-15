@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-sm navbar-fixed-top navbar-dark bg-dark">
+    <div class="col">
+        <ul class="navbar-nav nav-tabs">
+            <?php 
+            foreach($pages as $page) {
+                if ($page == "home" && $page == $currentPage) {
+                    echo '<li class="nav-item active">
+                            <a  href=" /">'. $page . '</a>
+                        </li>
+                    ';                    
+                } else if($page == "home") {
+                    echo '<li class="nav-item">
+                            <a  href=" /">'. $page . '</a>
+                        </li>
+                    ';      
+                }else if($page == $currentPage){
+                    echo '<li class="nav-item active">
+                            <a  href=" /'. $page.'">'. $page . '</a>
+                        </li>
+                    ';
+                } else {
+                    echo '<li class="nav-item">
+                            <a  href=" /'. $page.'">'. $page . '</a>
+                        </li>
+                    ';
+                }
+            }
+            ?>
+        </ul>
+    </div>
+
+    <!-- :c
+    <div class="col">
+        <div class="input-group">    
+            <input class="form-control" type="text" placeholder="Search">
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-outline-warning"> Search </button>
+            </div>
+         </div> 
+    </div>
+    -->
+
+    <div class="col">
+        <div class="dropdown">
+            <button type="button" class="btn btn-default" data-toggle="dropdown"><span> <img src="media/images/user.png"> </span></button>
+            <div id="triangle"></div>
+
+                <div class="dropdown-menu">
+                    <div class="dropdown-item">
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <div class="dropdown-item">
+                        <input type="text" placeholder="Password">
+                        </div>
+                        <div class="dropdown-item">
+                        <button class="btn btn-outline-primary" type="submit">Submit</button>
+                        </div>
+
+                    </div>
+
+                
+                </div> 
+
+            </div>                                                
+        </div>
+
+        
+        <!-- TODO - login form -->
+    </div>
+    
+</nav>

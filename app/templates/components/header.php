@@ -5,7 +5,7 @@
             foreach($pages as $page) {
                 echo '
                     <li class="nav-item page-redirect">
-                    <a data-page-redirect="' . $page . '">'. ($page !== "home" ? $page : "Home") . '</a>
+                    <a href="#" data-page-redirect="' . $page . '">'. ($page !== "home" ? $page : "Home") . '</a>
                     </li>
                 ';}
             ?>

@@ -1,8 +1,8 @@
 
 ### css ###
-*.css
-*.css.map
-/css/
+/www/css/main.css
+/www/css/main.css.map
+/www/css/pages
 ### Linux ###
 *~
 

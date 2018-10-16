@@ -3,28 +3,11 @@
         <ul class="navbar-nav nav-tabs">
             <?php 
             foreach($pages as $page) {
-                if ($page == "home" && $page == $currentPage) {
-                    echo '<li class="nav-item active">
-                            <a  href=" /">'. $page . '</a>
-                        </li>
-                    ';                    
-                } else if($page == "home") {
-                    echo '<li class="nav-item">
-                            <a  href=" /">'. $page . '</a>
-                        </li>
-                    ';      
-                }else if($page == $currentPage){
-                    echo '<li class="nav-item active">
-                            <a  href=" /'. $page.'">'. $page . '</a>
-                        </li>
-                    ';
-                } else {
-                    echo '<li class="nav-item">
-                            <a  href=" /'. $page.'">'. $page . '</a>
-                        </li>
-                    ';
-                }
-            }
+                echo '
+                    <li class="nav-item page-redirect">
+                    <a data-page-redirect="' . $page . '">'. ($page !== "home" ? $page : "Home") . '</a>
+                    </li>
+                ';}
             ?>
         </ul>
     </div>

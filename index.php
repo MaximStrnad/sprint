@@ -1,7 +1,5 @@
 <?php
-$pages = preg_grep('~\.(php)$~', scandir(dirname(__FILE__).'/templates/pages/'));
-foreach($pages as $key=>$page) {
-    $pages[$key] = str_replace('.php','',$page);
-}
-require dirname(__FILE__)."/templates/layout.php";
+require_once dirname(__FILE__)."/app/src/loader.php";
+require_once dirname(__FILE__)."/app/config/config.php";
+require_once dirname(__FILE__)."/app/layout.php";
 ?>

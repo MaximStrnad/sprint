@@ -1,13 +1,13 @@
 // out: ../css/main.css, compress: false, sourceMap: true
 
 // importing variables
-@import "enviroment/import.less";
+@import (reference) "enviroment/import.less";
 // importing less for each component
 @import "components/footer.less";
 @import "components/btn.less";
 @import "components/header.less";
 @import "components/footer.less";
-
+@import "pages/article.less";
 
 
 .nav-tabs {
@@ -15,5 +15,3 @@
         background-color: #343a40;
     }
 }
-
-
